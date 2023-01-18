@@ -16,7 +16,7 @@ def getPage(page, area):
 a = getPage(1,1)
 b = getPage(1,2)
 print(a)
-
+ыаыва
 # def request():
 #     url = 'https://api.hh.ru/?text=Python'
 #     data = requests.get(url).json()
