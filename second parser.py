@@ -101,6 +101,7 @@ page = 1                                          # сколько страни�
 text = 'Python'                                   # текст поиска как в поиске hh
 derectory = './dict_hh'                           # Дерриктория куда будут сохраняться страницы с карточками
 derectory_vacancy = './vacancy_hh'                # дерриктория куда будут сохраняться карточки
+derectory_exel_file = './'                        # место куда сохраняется exel файл
 
 Sbor_str(page, text, derectory)                   #собирает список страниц на котором представленна урезанная карточка по профессии
 Zapros_kartochek(derectory, derectory_vacancy)    # Выполняет функцию по сбору самих карточек и сохраняет их в отдельные файлы
@@ -108,4 +109,4 @@ Zapros_kartochek(derectory, derectory_vacancy)    # Выполняет функ�
 header = ['name', 'salary_from', 'salary_to', 'currency', 'experience', 'schedule', 'alternate_url']
 data = make_doc(derectory_vacancy)
 df = pandas.DataFrame(data, columns=header)
-df.to_csv('C:/Users/user/Desktop/Auto_Parser/data1.csv', sep=';', encoding='utf8')
+df.to_csv(f'{derectory_exel_file}/data1.csv', sep=';', encoding='utf8')
