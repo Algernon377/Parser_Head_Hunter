@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Auto_Parser.iml" filepath="$PROJECT_DIR$/.idea/Auto_Parser.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/TG_Bot/.idea/TG_Bot.iml" filepath="$USER_HOME$/PycharmProjects/TG_Bot/.idea/TG_Bot.iml" />
     </modules>
   </component>
 </project>
