@@ -11,7 +11,7 @@ import pandas
 
 class Reseption:
 
-    def __init__(self, name_request, derectory, area = None, user_id = 'id12'):
+    def __init__(self, name_request, derectory, area = 113, user_id = 'id12'):
         self.name_request = name_request
         self.area = area
         self.user_id = user_id
@@ -19,11 +19,11 @@ class Reseption:
         self.a = Save_cart(20, self.area, self.name_request, self.derectory, self.user_id)
         try:
             os.mkdir(f'{derectory}/{user_id}')
-        except FileExistsError:
-            print(FileExistsError)
-            # shutil.rmtree(f"{derectory}/{user_id}")
-            # os.mkdir(f'{derectory}/{user_id}')
-
+        except FileExistsError as ex:
+            print(ex)
+            shutil.rmtree(f"{derectory}/{user_id}")
+            os.mkdir(f'{derectory}/{user_id}')
+            print('Я удалил его и на его месте создал файл с  таким же именем')
 
     def save_str(self):
         self.a()
@@ -230,9 +230,9 @@ class MakeFile:
 ##### Необходимые параметры   ########
 
 page = 100                                                              # сколько страниц запрашиваем
-text = 'календарно-сетевое планирование'                                # текст поиска как в поиске hh
+text = 'календарно-сетевому планированию'                                # текст поиска как в поиске hh
 derectory = 'C:/Users/user/Desktop/for parser'                          # Дерриктория куда будут сохраняться страницы с карточками
-area = 0                                                                # Регион поиска
+area = [1438, 1, 2]                                                                # Регион поиска
 
 ##### Запуск функций (в общем то управление парсером) #########
 
